@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Build Artifacts
+dist/
+build/
+
+# OS-specific files
+.DS_Store      # macOS
+Thumbs.db      # Windows
+
+# VS Code Settings
+.vscode/
