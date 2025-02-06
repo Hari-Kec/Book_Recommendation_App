@@ -1,0 +1,1 @@
+This React-based web application provides personalized book recommendations based on user input. Users can search for books by category or provide a synopsis, and the app will generate a collection of relevant books.
