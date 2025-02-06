@@ -1,0 +1,320 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* Background Animation */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Book animation */
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.1;
+    animation: background-fade 10s infinite alternate;
+  }
+  /* Title Style */
+.app-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3c3f4a;  /* Light blue color */
+    margin-top: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Header Section */
+  .header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 4px solid #444;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes background-fade {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 4px solid #444;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Search Bar */
+  .search {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .search input {
+    width: 50%;
+    padding: 12px;
+    border: 2px solid #6e8efb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .search input:focus {
+    border-color: #a777e3;
+  }
+  
+  .search button {
+    background: #6e8efb;
+    border: none;
+    padding: 12px 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .search button:hover {
+    background: #5a7ce0;
+  }
+  
+  /* Synopsis Search */
+  .synopsis-search {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 600px;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .synopsis-search textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  .synopsis-search button {
+    display: block;
+    background: #a777e3;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .synopsis-search button:hover {
+    background: #9156c9;
+  }
+  
+  /* Category Selector */
+  .category-selector {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease-out;
+  }
+  
+  .category-selector label {
+    display: inline-block;
+    background: #ddd;
+    padding: 8px 12px;
+    border-radius: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .category-selector input {
+    display: none; /* Hide the checkbox */
+  }
+  
+  /* When the checkbox is checked, change the label's background color */
+  .category-selector input:checked + label {
+    background: #6e8efb; /* Apply the color when checked */
+    color: white;
+    transform: scale(1.1); /* Slightly enlarge when selected */
+    box-shadow: 0 0 10px rgba(110, 142, 251, 0.6);
+  }
+  
+  /* Hover effect for unchecked labels */
+  .category-selector label:hover {
+    background: #a777e3;
+    transform: scale(1.05);
+  }
+  
+  /* When the checkbox is checked and label is hovered, maintain the selected color */
+  .category-selector input:checked + label:hover {
+    background: #6e8efb;
+    transform: scale(1.1);
+  }
+  
+  .category-selector button {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    transition: background-color 0.3s;
+  }
+  
+  .category-selector button:hover {
+    background: #5a7ce0;
+  }
+  
+  /* Book Cards */
+  .book-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-card img {
+    max-width: 100px;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+  }
+  
+  .book-card h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .book-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .book-card a {
+    display: block;
+    background: #6e8efb;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .book-card a:hover {
+    background: #5a7ce0;
+  }
+  
+  /* Loading Indicator */
+  p {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    animation: fadeIn 2s ease-out;
+  }
+  

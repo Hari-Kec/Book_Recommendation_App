@@ -1,4 +1,5 @@
-import react from 'react';
+import React, { useState } from 'react';
+
 const Modal=({show,item,onClose})=>{
     if(!show)
     {

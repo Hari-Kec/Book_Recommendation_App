@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Main from './Components/Main';
-import './Components/style.css';
+
 function App() {
+  const [categories, setCategories] = useState("");
+
   return (
     <>
-      <Main/>
+      <Main categories={categories} />
     </>
   );
 }
